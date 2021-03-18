@@ -37,7 +37,7 @@ It is outputted into an output channel (tab) "keylogger", optionally to file.
 "keylogger.textMaxLength": {
     "type": "integer",
     "default": -1,
-    "description": "Set a maximum length of each captured text. Everything above is cut off. A value of 0 effectively omits the typed keys in the log. Set to -1 to not cut off anything."
+    "description": "Set a maximum length of each captured text. Everything above is cut off. A value of 0 effectively omits the text body in the log. Set to -1 to not cut off anything."
 },
 "keylogger.outputFile": {
     "type": "string",

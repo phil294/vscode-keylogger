@@ -5,7 +5,7 @@
 		"type": "git",
 		"url": "https://github.com/phil294/vscode-keylogger"
 	},
-	"description": "Minimalistic extension that logs basic text input events with their timestamp, nothing else.",
+	"description": "Minimalist extension that logs basic text input events with their timestamp, nothing else.",
 	"version": "0.0.1",
 	"engines": {
 		"vscode": "^1.54.0"
@@ -34,7 +34,7 @@
 				"keylogger.textMaxLength": {
 					"type": "integer",
 					"default": -1,
-					"description": "Set a maximum length of each captured text. Everything above is cut off. A value of 0 effectively omits the typed keys in the log. Set to -1 to not cut off anything."
+					"description": "Set a maximum length of each captured text. Everything above is cut off. A value of 0 effectively omits the text body in the log. Set to -1 to not cut off anything."
 				},
 				"keylogger.outputFile": {
 					"type": "string",
