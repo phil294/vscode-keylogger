@@ -3,7 +3,7 @@
 	"displayName": "keylogger",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/phil294/vscode-keylogger"
+		"url": "https://github.com/phil294/vscode-keylogger.git"
 	},
 	"description": "Minimalist extension that logs basic text input events with their timestamp, nothing else.",
 	"version": "0.0.1",
