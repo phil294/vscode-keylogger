@@ -1,0 +1,68 @@
+{
+  "name": "keylogger",
+	"displayName": "keylogger",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/phil294/vscode-keylogger"
+	},
+	"description": "Minimalistic extension that logs basic text input events with their timestamp, nothing else.",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.54.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+        "onStartupFinished"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"configuration": {
+			"title": "keylogger",
+			"properties": {
+				"keylogger.debounceMs": {
+					"type": "integer",
+					"default": 1000,
+					"description": "Debounce delay in milliseconds. If you set this to something greater than 0, the extension will buffer your input until the delay has elapsed and then log it out combined. The setting keylogger.textMaxLength will be applied to the resulting combined string."
+				},
+				"keylogger.minDelayMs": {
+					"type": "integer",
+					"default": -1,
+					"description": "The minimum delay between two events in milliseconds. Faster inputs are simply ignored. Set to <= 0 to log everything."
+				},
+				"keylogger.textMaxLength": {
+					"type": "integer",
+					"default": -1,
+					"description": "Set a maximum length of each captured text. Everything above is cut off. A value of 0 effectively omits the typed keys in the log. Set to -1 to not cut off anything."
+				},
+				"keylogger.outputFile": {
+					"type": "string",
+					"default": "",
+					"description": "Input a file path to log to, *additionally* to the output channel. Set to an empty string to not write out to any file."
+				}
+			}
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "yarn run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "yarn run compile && yarn run lint",
+		"lint": "eslint src --ext ts",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.54.0",
+		"@types/glob": "^7.1.3",
+		"@types/mocha": "^8.0.4",
+		"@types/node": "^12.11.7",
+		"eslint": "^7.19.0",
+		"@typescript-eslint/eslint-plugin": "^4.14.1",
+		"@typescript-eslint/parser": "^4.14.1",
+		"glob": "^7.1.6",
+		"mocha": "^8.2.1",
+		"typescript": "^4.1.3",
+		"vscode-test": "^1.5.0"
+	}
+}
