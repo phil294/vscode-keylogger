@@ -7,6 +7,13 @@
 	},
 	"description": "Minimalist extension that logs basic text input events with their timestamp, nothing else.",
 	"version": "0.0.1",
+	"author": "phil294",
+	"publisher": "phil294",
+	"license": "MIT",
+	"keywords": [
+		"keylogger",
+		"logging"
+	],
 	"engines": {
 		"vscode": "^1.54.0"
 	},
